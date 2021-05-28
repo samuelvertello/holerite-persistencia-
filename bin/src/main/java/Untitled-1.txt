@@ -1,0 +1,60 @@
+com.poo:u5_b:jar:1.0-SNAPSHOT
++- junit:junit:jar:4.11:test (scope not updated to runtime)
+   \- org.hamcrest:hamcrest-core:jar:1.3:test
++- org.hibernate.orm:hibernate-core:jar:6.0.0.Alpha3:compile
+   +- org.junit.vintage:junit-vintage-engine:jar:5.3.1:compile
+      +- org.apiguardian:apiguardian-api:jar:1.1.1:compile
+      +- org.junit.platform:junit-platform-engine:jar:1.8.0-M1:compile
+         +- (org.apiguardian:apiguardian-api:jar:1.0.0:compile - omitted for duplicate)
+         +- org.junit.platform:junit-platform-commons:jar:1.8.0-M1:compile
+            \- (org.apiguardian:apiguardian-api:jar:1.0.0:compile - omitted for duplicate)
+         \- org.opentest4j:opentest4j:jar:1.2.0:compile
+      \- (junit:junit:jar:4.12:runtime - omitted for conflict with 4.11)
+   +- (org.junit.jupiter:junit-jupiter-engine:jar:5.3.1:compile - omitted for conflict with 5.8.0-M1)
+   +- org.jboss.logging:jboss-logging:jar:3.3.2.Final:compile
+   +- javax.persistence:javax.persistence-api:jar:2.2:compile
+   +- org.javassist:javassist:jar:3.24.0-GA:compile
+   +- net.bytebuddy:byte-buddy:jar:1.10.2:compile
+   +- org.antlr:antlr4:jar:4.7.1:compile
+      +- org.antlr:antlr4-runtime:jar:4.7.1:compile
+      +- org.antlr:antlr-runtime:jar:3.5.2:compile
+      +- org.antlr:ST4:jar:4.0.8:compile
+         \- (org.antlr:antlr-runtime:jar:3.5.2:compile - omitted for duplicate)
+      +- org.abego.treelayout:org.abego.treelayout.core:jar:1.0.3:compile
+      +- org.glassfish:javax.json:jar:1.0.4:compile
+      \- com.ibm.icu:icu4j:jar:58.2:compile
+   +- org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:jar:1.1.1.Final:compile
+   +- org.jboss:jandex:jar:2.1.1.Final:compile
+   +- com.fasterxml:classmate:jar:1.5.1:compile
+   +- javax.activation:javax.activation-api:jar:1.2.0:compile
+   +- org.dom4j:dom4j:jar:2.1.1:compile
+   +- org.hibernate.common:hibernate-commons-annotations:jar:5.1.0.Final:compile
+      \- (org.jboss.logging:jboss-logging:jar:3.3.2.Final:compile - omitted for duplicate)
+   +- javax.xml.bind:jaxb-api:jar:2.3.1:compile
+      \- (javax.activation:javax.activation-api:jar:1.2.0:compile - omitted for duplicate)
+   \- org.glassfish.jaxb:jaxb-runtime:jar:2.3.1:compile
+      +- (javax.xml.bind:jaxb-api:jar:2.3.1:compile - omitted for duplicate)
+      +- org.glassfish.jaxb:txw2:jar:2.3.1:compile
+      +- com.sun.istack:istack-commons-runtime:jar:3.0.7:compile
+      +- org.jvnet.staxex:stax-ex:jar:1.8:compile
+      +- com.sun.xml.fastinfoset:FastInfoset:jar:1.2.15:compile
+      \- (javax.activation:javax.activation-api:jar:1.2.0:compile - omitted for duplicate)
++- mysql:mysql-connector-java:jar:8.0.25:compile
+   \- com.google.protobuf:protobuf-java:jar:3.11.4:compile
++- org.junit.jupiter:junit-jupiter-api:jar:5.8.0-M1:test (scope not updated to compile)
+   +- (org.apiguardian:apiguardian-api:jar:1.1.1:compile - scope updated from test; omitted for duplicate)
+   +- (org.opentest4j:opentest4j:jar:1.2.0:compile - scope updated from test; omitted for duplicate)
+   \- (org.junit.platform:junit-platform-commons:jar:1.8.0-M1:compile - scope updated from test; omitted for duplicate)
++- org.junit.jupiter:junit-jupiter-engine:jar:5.8.0-M1:test (scope not updated to compile)
+   +- (org.apiguardian:apiguardian-api:jar:1.1.1:compile - scope updated from test; omitted for duplicate)
+   +- (org.junit.platform:junit-platform-engine:jar:1.8.0-M1:compile - scope updated from test; omitted for duplicate)
+   +- (org.junit.jupiter:junit-jupiter-api:jar:5.8.0-M1:test - omitted for duplicate)
+   \- org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.4.20:test
+      +- org.jetbrains.kotlin:kotlin-stdlib:jar:1.4.20:test
+         +- org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.4.20:test
+         \- org.jetbrains:annotations:jar:13.0:test
+      \- org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.4.20:test
+         \- (org.jetbrains.kotlin:kotlin-stdlib:jar:1.4.20:test - omitted for duplicate)
+\- org.junit.jupiter:junit-jupiter-params:jar:5.8.0-M1:test
+   +- (org.apiguardian:apiguardian-api:jar:1.1.1:compile - scope updated from test; omitted for duplicate)
+   \- (org.junit.jupiter:junit-jupiter-api:jar:5.8.0-M1:test - omitted for duplicate)
