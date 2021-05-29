@@ -2,7 +2,9 @@ import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -31,7 +33,7 @@ public class ExtratoDeSalario {
     @ManyToOne
     private Funcionario funcionario;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     private Set<ItemDeExtratoDeSalario> item = new HashSet<>();
 
     public ExtratoDeSalario(int ano, int mes, LocalDate data, float totalComDesconto, float totalSemDesconto,

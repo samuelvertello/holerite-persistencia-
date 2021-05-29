@@ -84,7 +84,27 @@ public class Main {
 		//remover funcionario
 		empresa.removerFuncionario(f2);
 		remover(f2);
+
+		//************************************************************************** */
+		//informacoes de extrato
+		float irpf = cargo.getSalarioBaseHora() * 0.27f;
+		float inss = cargo.getSalarioBaseHora() * 0.14f;		
+		float totalSemDesconto = cargo.getSalarioBaseHora();
+		float totalComDesconto =cargo.getSalarioBaseHora() - irpf - inss;
+		int cargaHoraria = 44 * 5;
+		int horasTrabalhadas = 220;		
+		int horaFalta = cargaHoraria - horasTrabalhadas;
 		
+
+		ItemDeExtratoDeSalario item = new ItemDeExtratoDeSalario(01, "Salário bruto", "05/2021", cargo.getSalarioBaseHora());
+		
+		ExtratoDeSalario extrato = new ExtratoDeSalario(2021, 05, LocalDate.now(), totalComDesconto, totalSemDesconto, horasTrabalhadas,horaFalta, irpf, inss);
+		
+		extrato.inserirItem(item);
+
+		f.adicionarExtrato(extrato);		
+		salvar(f);
+
 		fechar();
 		
 	}
