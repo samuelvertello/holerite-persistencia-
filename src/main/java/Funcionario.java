@@ -37,10 +37,6 @@ public class Funcionario {
     private Set<ExtratoDeSalario> extrato = new HashSet<>();    
         
 
-    public Funcionario() {
-	}
-
-
 	public Funcionario(String codigo, String nome, String cpf, LocalDate dataAdm, String cbo) {
         this.codigo = codigo;
         this.nome = nome;
