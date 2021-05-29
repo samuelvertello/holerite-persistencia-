@@ -2,6 +2,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -20,7 +21,9 @@ public class Cargo {
     private Integer id;
 
     private int codigo;
-    private String nome;
+    private String nome; 
+    
+    @Column(name = "salarioBaseHora", columnDefinition = "float(7,2)", nullable = false)
     private float salarioBaseHora;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)    
