@@ -41,7 +41,7 @@ public class Main {
 		System.out.println("excluido...");
 
 	}
-
+	
 	private static void fechar(){
 
 		entityManager.close();
@@ -104,6 +104,8 @@ public class Main {
 
 		f.adicionarExtrato(extrato);		
 		salvar(f);
+
+		
 
 		fechar();
 		
