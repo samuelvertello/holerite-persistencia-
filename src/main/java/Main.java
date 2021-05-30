@@ -1,12 +1,11 @@
 import java.time.LocalDate;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 public class Main {
 
-   private static EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("holerite");
+    private static EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("holerite");
 	private static EntityManager entityManager = entityManagerFactory.createEntityManager();
 
 	private static void salvar(Object a){
