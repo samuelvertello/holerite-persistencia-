@@ -1,4 +1,7 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -7,7 +10,8 @@ public class Main {
 
     private static EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("holerite");
 	private static EntityManager entityManager = entityManagerFactory.createEntityManager();
-
+	
+	
 	private static void salvar(Object a){
 
 
@@ -40,7 +44,15 @@ public class Main {
 		System.out.println("excluido...");
 
 	}
-	
+
+	public static <T> List<T> listar(Class<T> entityClass) {
+		
+		
+		return entityManager.createQuery("select a from " + entityClass.getTypeName()+ " a", entityClass)
+                .getResultList();
+    }
+
+		
 	private static void fechar(){
 
 		entityManager.close();
@@ -99,12 +111,13 @@ public class Main {
 		
 		ExtratoDeSalario extrato = new ExtratoDeSalario(2021, 05, LocalDate.now(), totalComDesconto, totalSemDesconto, horasTrabalhadas,horaFalta, irpf, inss);
 		
+		
 		extrato.inserirItem(item);
 
 		f.adicionarExtrato(extrato);		
 		salvar(f);
 
-		
+		listar(Cargo.class);		
 
 		fechar();
 		
