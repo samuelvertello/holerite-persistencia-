@@ -154,12 +154,12 @@ public class ExtratoDeSalario {
 
 
     @Override
-    public String toString() {
-        return "ExtratoDeSalario [ano=" + ano + ", data=" + data + ", funcionario=" + funcionario + ", horasFalta="
-                + horasFalta + ", horasTrabalhadas=" + horasTrabalhadas + ", id=" + id + ", inss=" + inss + ", irpf="
-                + irpf + ", item=" + item + ", mes=" + mes + ", totalComDesconto=" + totalComDesconto
-                + ", totalSemDesconto=" + totalSemDesconto + "]";
-    }
+	public String toString() {
+		return "ExtratoDeSalario [ano=" + ano + ", data=" + data + ", funcionario=" + funcionario + ", horasFalta="
+				+ horasFalta + ", horasTrabalhadas=" + horasTrabalhadas + ", id=" + id + ", inss=" + inss + ", irpf="
+				+ irpf + ", item=" + item + ", mes=" + mes + ", totalComDesconto=" + totalComDesconto
+				+ ", totalSemDesconto=" + totalSemDesconto + "]";
+	}
     
     
  

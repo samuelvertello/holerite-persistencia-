@@ -44,11 +44,11 @@ public class Main {
 
 	}
 
-	public static <T> List<T> listar(Class<T> entityClass) {
+	private static <T> List<T> listar(Class<T> entityClass) {	
+
+
+		return entityManager.createQuery("select a from " + entityClass.getSimpleName()+ " a", entityClass).getResultList();
 		
-		
-		return entityManager.createQuery("select a from " + entityClass.getTypeName()+ " a", entityClass)
-                .getResultList();
     }
 
 		
@@ -116,7 +116,7 @@ public class Main {
 		f.adicionarExtrato(extrato);		
 		salvar(f);
 
-		listar(Cargo.class);		
+		listar(Funcionario.class);
 
 		fechar();
 		
