@@ -46,9 +46,18 @@ public class Main {
 
 	private static <T> List<T> listar(Class<T> entityClass) {	
 
-
-		return entityManager.createQuery("select a from " + entityClass.getSimpleName()+ " a", entityClass).getResultList();
+		List<T> lista = entityManager.createQuery("select a from " + entityClass.getSimpleName()+ " a", entityClass).getResultList();
 		
+		System.out.println("--- LIST "+entityClass.getSimpleName() + " - " + lista.size());
+		for(Object item : lista) {
+			System.out.println("---");
+			System.out.println(item);
+			System.out.println("---");
+
+		}
+		System.out.println();
+
+		return lista;
     }
 
 		
