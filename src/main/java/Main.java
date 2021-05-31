@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -44,11 +45,13 @@ public class Main {
 
 	}
 
-	private static <T> List<T> listar(Class<T> entityClass) {	
+	private static <T>  List<T> listar(Class<T> entityClass) {		
 
-		List<T> lista = entityManager.createQuery("select a from " + entityClass.getSimpleName()+ " a", entityClass).getResultList();
+		List<T> lista  = entityManager.createQuery("select a from " + entityClass.getSimpleName()+ " a", entityClass).getResultList();
 		
 		System.out.println("--- LIST "+entityClass.getSimpleName() + " - " + lista.size());
+
+		
 		for(Object item : lista) {
 			System.out.println("---");
 			System.out.println(item);
@@ -124,8 +127,7 @@ public class Main {
 
 		f.adicionarExtrato(extrato);		
 		salvar(f);
-
-		listar(Funcionario.class);
+		
 
 		fechar();
 		

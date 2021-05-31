@@ -48,8 +48,6 @@ public class Funcionario {
     }
 
 
-
-
     public Integer getId() {
         return id;
     }
